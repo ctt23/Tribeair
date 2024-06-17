@@ -1,0 +1,151 @@
+.trekkingContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.trekkingWrapper {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative
+}
+
+.bookNow {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    border: none;
+    padding: 10px 20px;
+    background-color: #88BB92;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+.trekkingTitle {
+    font-size: 24px;
+}
+
+.trekkingAddress {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.trekkingImgWrapper {
+    width: 33%;
+    
+}
+
+.trekkingImg {
+    width: 100%;
+    object-fit: cover;
+}
+
+.trekkingImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+
+.trekkingDetails {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+
+}
+
+.trekkingDetailsTexts {
+    flex: 3
+}
+
+.trekkingDetailsPrice {
+    flex: 1;
+    background-color: #A0ECD0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.trekkingDetailsPrice>h1{
+    font-size: 18px;
+    color: #555;
+}
+
+.trekkingDetailsPrice>span{
+    font-size: 14px;
+    color: #555;
+}
+
+.trekkingDetailsPrice>h2{
+    font-weight: 300;
+}
+
+.trekkingDetailsPrice>button{
+    border: none;
+    padding: 10px 20px;
+    background-color: #88BB92;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.trekkingDesc {
+    font-size: 14px;
+    margin-top: 20px;
+
+}
+
+.slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.613);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.sliderWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.sliderImg {
+    width: 100%;
+    height: 80vh;
+    object-fit: contain;
+    
+}
+  
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: lightgray;
+    cursor: pointer;
+}
+  
+.arrow {
+    margin: 20px;
+    font-size: 50px;
+    color: lightgray;
+    cursor: pointer;
+}
