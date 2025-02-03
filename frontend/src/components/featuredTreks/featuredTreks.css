@@ -15,9 +15,7 @@
     cursor: pointer;
 }
 
-.ftItem:hover {
-    transform: scale(1.1);
-}
+
 
 .ftImg{
     width: 100%;
@@ -40,7 +38,7 @@
 }
 
 .ftRating>button{
-    background-color: #A0ECD0;
+    background-color: #ff7139;
     color: white;
     border: none;
     padding: 3px;

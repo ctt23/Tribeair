@@ -4,11 +4,9 @@ import { faCalendarDays, faPersonWalking, faPerson, faBox } from "@fortawesome/f
 import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
-
-
 
 const Header = ({type}) => {
     const [destination, setDestination] = useState("")
@@ -26,7 +24,9 @@ const Header = ({type}) => {
         children: 0,
     });
 
-    const navigate = useNavigate ()
+    const navigate = useNavigate()
+    const dateRef = useRef(null);
+    const optionsRef = useRef(null);
 
     const handleOption = (name, operation) => {
         setOptions((prev) => {
@@ -37,10 +37,24 @@ const Header = ({type}) => {
         });
       };
 
-      const handleSearch = () => {
+    const handleSearch = () => {
         navigate ("/trekking", {state:{ destination, date, options}});
-      }
+    }
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dateRef.current && !dateRef.current.contains(event.target)) {
+                setOpenDate(false);
+            }
+            if (optionsRef.current && !optionsRef.current.contains(event.target)) {
+                setOpenOptions(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
     return (
     <div className="header">
@@ -58,11 +72,11 @@ const Header = ({type}) => {
             
             {type !=="list" && (
                 <>
-                    <h1 className="headerTitle">All treks in one place</h1>
+                    <h1 className="headerTitle">All guided treks in one place</h1>
                     <p className="headerDesc">
-                        Book your trek holiday
+                       
                     </p>
-                <button className="headerBtn">Sign in / Register</button>
+               
                 <div className="headerSearch">
                         <div className="headerSearchItem">
                             <FontAwesomeIcon icon={faPersonWalking} className="headerIcon" />
@@ -73,7 +87,7 @@ const Header = ({type}) => {
                                 onChange={(e) => setDestination(e.target.value)}
                             />
                         </div>
-                        <div className="headerSearchItem">
+                        <div className="headerSearchItem" ref={dateRef}>
                             <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
                             <span onClick={()=>setOpenDate(!openDate)} className="headerSearchText">{`${format(date[0].startDate, "dd/MM/yyyy")} to ${format(date[0].startDate, "dd/MM/yyyy")}`}</span>
                         {openDate && <DateRange
@@ -85,7 +99,7 @@ const Header = ({type}) => {
                                 minDate={new Date()}
                             />}   
                         </div>
-                        <div className="headerSearchItem">
+                        <div className="headerSearchItem" ref={optionsRef}>
                             <FontAwesomeIcon icon={faPerson} className="headerIcon" />
                             <span onClick={()=>setOpenOptions(!openOptions)} className="headerSearchTex">{`${options.adult} adult · ${options.children} children`} </span>
                                 {openOptions && <div className="options">

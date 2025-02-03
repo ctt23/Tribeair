@@ -19,7 +19,7 @@ const TrekkingList = () => {
             </div>    
         </div>
         <div className="tListItem">
-            <img src="https://overlandtreknepal.com/wp-content/uploads/2024/01/241c9191-89db-4467-80e5-fe26709b6104.jpg" alt="" className="tListImg"/>
+            <img src="https://www.nepalhimalayastrekking.com/public/uploads/kanchenjunga-base-camp-trek-1.jpg" alt="" className="tListImg"/>
             <div className="tListTitles">
                 <h1>Strenuous</h1>
                 <h2>15 treks</h2>    

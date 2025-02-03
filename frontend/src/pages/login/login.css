@@ -1,0 +1,85 @@
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Arial', sans-serif;
+}
+
+.loginWrapper {
+  width: 400px;
+  padding: 40px;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.loginTitle {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.loginInput {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.loginButton {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.loginButton.google {
+  background-color: #db4437;
+  color: white;
+}
+
+.loginButton.google:hover {
+  background-color: #c33d2e;
+}
+
+.loginButton.facebook {
+  background-color: #3b5998;
+  color: white;
+}
+
+.loginButton.facebook:hover {
+  background-color: #334d84;
+}
+
+.loginButton.linkedin {
+  background-color: #0077b5;
+  color: white;
+}
+
+.loginButton.linkedin:hover {
+  background-color: #006699;
+}
+
+.loginOr {
+  margin: 20px 0;
+  font-size: 16px;
+  color: #888;
+}
+
+.loginButton .faGoogle,
+.loginButton .faFacebook,
+.loginButton .faLinkedin {
+  margin-right: 12px;
+}

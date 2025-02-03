@@ -12,9 +12,7 @@
   cursor: pointer;
 }
 
-.tListItem:hover {
-  transform: scale(1.1);
-}
+
   
 .tListImg{
   width: 100%;
