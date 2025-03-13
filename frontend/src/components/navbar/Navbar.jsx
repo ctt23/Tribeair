@@ -17,6 +17,7 @@ const Navbar = ({ showButtons = true }) => {
         <span className="logo">Tribeair</span>
         {showButtons && (
           <div className="navItems">
+            <button className="navButton noBackground" onClick={handleNavigation}>Tribeair your adventure</button>
             <button className="navButton" onClick={handleNavigation}>Register</button>
             <button className="navButton" onClick={handleNavigation}>Login</button>
           </div>

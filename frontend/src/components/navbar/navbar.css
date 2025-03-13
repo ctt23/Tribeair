@@ -17,17 +17,26 @@
 
 .logo {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 30px;
     font-family: 'Arial';
 
 }
 
 .navButton {
-    margin-left: 20px;
+    margin-left: 1cqb;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
     color: black;
+    background-color: white;
+    border-radius: 5px;
 
 }
+
+.navButton.noBackground {
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+}
+
 

@@ -7,7 +7,7 @@ const DestinationSchema = new mongoose.Schema ({
         required: true,
     },
     type: {
-        type: String,
+        type: String,   
         required: true,
     },
     region: {

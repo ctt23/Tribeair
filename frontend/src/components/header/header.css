@@ -71,6 +71,8 @@
 
 .headerIcon {
     color: lightgray;
+    font-size: 24px;
+
 }
 
 .headerSearchItem {
@@ -84,6 +86,7 @@
 .headerSearchInput {
     border: none;
     outline: none;
+    font-size: 14px;
 }
 
 .headerSearchText {
