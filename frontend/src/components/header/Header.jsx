@@ -89,8 +89,13 @@ const Header = ({type}) => {
                         </div>
                         <div className="headerSearchItem" ref={dateRef}>
                             <FontAwesomeIcon icon={faCalendarDays} className="headerIcon" />
-                            <span onClick={()=>setOpenDate(!openDate)} className="headerSearchText">{`${format(date[0].startDate, "dd/MM/yyyy")} to ${format(date[0].startDate, "dd/MM/yyyy")}`}</span>
-                        {openDate && <DateRange
+                            <span 
+                                onClick={() => setOpenDate(!openDate)} 
+                                className={`headerSearchText ${date[0].startDate && date[0].endDate ? 'selected' : ''}`}
+                            >
+                                {`${format(date[0].startDate, "dd/MM/yyyy")} to ${format(date[0].endDate, "dd/MM/yyyy")}`}
+                            </span>
+                            {openDate && <DateRange
                                 editableDateInputs={true}
                                 onChange={item => setDate([item.selection])}
                                 moveRangeOnFirstSelection={false}

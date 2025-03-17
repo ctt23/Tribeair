@@ -1,89 +1,57 @@
-.loginContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.login {
   height: 100vh;
-  background-color: #f0f2f5;
-  font-family: 'Arial', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.loginWrapper {
-  width: 400px;
-  padding: 40px;
-  background-color: white;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  text-align: center;
+.lContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
 }
 
-.loginTitle {
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: #333;
+.lInput{
+  height: 30px;
+  padding: 10px;
 }
 
-.loginInput {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 16px;
-}
-
-.loginButton {
-  width: 100%;
-  padding: 14px;
-  margin-bottom: 20px;
+.lButton {
   border: none;
-  border-radius: 8px;
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
   cursor: pointer;
-  font-size: 18px;
+  border-radius: 5px;
+}
+
+.lButton:disabled{
+  background-color: #0071c28c;
+  cursor: not-allowed;
+}
+
+.loginContainer {
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  margin: auto; /* Center the container */
+}
+
+.loginTitle {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  white-space: nowrap; /* Ensure text is in a straight line */
   display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
 }
 
-.loginButton.google {
-  background-color: #db4437;
-  color: white;
+.formInput {
+  height: 15px; 
+  padding: 15px; 
+  font-size: 16px; 
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ff7139;
 }
 
-.loginButton.google:hover {
-  background-color: #c33d2e;
-}
-
-.loginButton.facebook {
-  background-color: #3b5998;
-  color: white;
-}
-
-.loginButton.facebook:hover {
-  background-color: #334d84;
-}
-
-.loginButton.linkedin {
-  background-color: #0077b5;
-  color: white;
-}
-
-.loginButton.linkedin:hover {
-  background-color: #006699;
-}
-
-.loginOr {
-  margin: 20px 0;
-  font-size: 16px;
-  color: #888;
-}
-
-.loginButton .faGoogle,
-.loginButton .faFacebook,
-.loginButton .faLinkedin {
-  margin-right: 12px;
-}

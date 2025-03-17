@@ -5,7 +5,6 @@
     justify-content: center;
     position:relative;
    
-
 }
 
 .headerContainer {
@@ -41,7 +40,7 @@
 
 .headerDesc {
     margin: 20px 0px;
-
+    
 }
 
 .headerBtn {
@@ -90,7 +89,7 @@
 }
 
 .headerSearchText {
-    color: lightgray;
+    color: black;
     cursor: pointer;
 
 }
@@ -154,5 +153,13 @@
     position: absolute;
     top: 20px;
     right: 20px;
+}
+
+.headerTitle {
+    font-size: 45px; 
+    font-weight: bold;
+    color: black;
+    margin: 20px 0;
+    text-align: left;
 }
 

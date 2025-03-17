@@ -1,28 +1,44 @@
-import React from 'react';
+import React, { useState } from "react";
 import "./login.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle, faFacebook, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import Navbar from '../../components/navbar/Navbar';
+import Navbar from "../../components/navbar/Navbar";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle login logic here
+    console.log("Email:", email);
+  };
+
   return (
     <>
       <Navbar showButtons={false} />
       <div className="loginContainer">
-        <div className="loginWrapper">
-          <input type="text" placeholder="Username or Email" className="loginInput" />
-          <input type="password" placeholder="Password" className="loginInput" />
-          <button className="loginButton">Login</button>
-          <div className="loginOr">OR</div>
-          <button className="loginButton google">
-            <FontAwesomeIcon icon={faGoogle} /> Login with Google
-          </button>
-          <button className="loginButton facebook">
-            <FontAwesomeIcon icon={faFacebook} /> Login with Facebook
-          </button>
-          <button className="loginButton linkedin">
-            <FontAwesomeIcon icon={faLinkedin} /> Login with LinkedIn
-          </button>
+        <div className="loginBox">
+          <h1 className="loginTitle">Login to access your account</h1>
+          <form onSubmit={handleSubmit} className="loginForm">
+            <div className="formGroup">
+              <label htmlFor="email" className="formLabel">Email address</label>
+              <br /> {/* Add a line break to move the input below the label */}
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={email}
+                onChange={handleChange}
+                className="formInput"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+            
+          </form>
+          <button type="submit" className="loginButton">Continue with email</button>
         </div>
       </div>
     </>
