@@ -1,34 +1,10 @@
+
+
 .login {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.lContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.lInput{
-  height: 30px;
-  padding: 10px;
-}
-
-.lButton {
-  border: none;
-  padding: 10px 20px;
-  background-color: #0071c2;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.lButton:disabled{
-  background-color: #0071c28c;
-  cursor: not-allowed;
 }
 
 .loginContainer {
@@ -46,6 +22,9 @@
   display: flex;
 }
 
+
+
+
 .formInput {
   height: 15px; 
   padding: 15px; 
@@ -55,3 +34,13 @@
   border: 1px solid #ff7139;
 }
 
+.loginButton {
+  background-color: #ff7139;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 30px; /* Increase the margin-top to move it down */
+}
