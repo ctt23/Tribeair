@@ -34,14 +34,16 @@
 }
 
 .loginButton {
+  margin-top: 10px;
+  width: 100%;
   background-color: #ff7139;
   color: white;
-  font-weight: 500;
+  font-weight: 600;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
-  margin-top: 30px; /* Increase the margin-top to move it down */
+  text-align: center;
 }
 
 

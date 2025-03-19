@@ -1,0 +1,71 @@
+.verifyContainer {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px;
+    background-color: white;
+    text-align: center;
+    margin: auto;
+  }
+  
+  .verifyTitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .verifyForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .formLabel {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .codeInputContainer {
+    display: flex; /* Use flexbox to align inputs horizontally */
+    justify-content: center;
+    gap: 10px; /* Add spacing between input fields */
+    margin-bottom: 20px;
+  }
+  
+  .codeInput {
+    width: 40px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .codeInput:focus {
+    border-color: #ff7139;
+  }
+  
+  .verifyButton {
+    width: 100%;
+    background-color: #ff7139;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .verifyButton:hover {
+    background-color: #e65a1e;
+  }
+  
+  .verifyButton.disabled {
+    background-color: #ddd;
+    color: #aaa;
+    cursor: not-allowed;
+  }

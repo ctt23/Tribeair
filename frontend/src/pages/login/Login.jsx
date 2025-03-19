@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./login.css";
 import Navbar from "../../components/navbar/Navbar";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setEmail(e.target.value);
@@ -13,6 +15,7 @@ const Login = () => {
     e.preventDefault();
     // Handle login logic here
     console.log("Email:", email);
+    navigate("/verify"); // Redirect to the verify page    
   };
 
   return (
