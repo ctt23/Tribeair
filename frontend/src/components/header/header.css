@@ -136,23 +136,10 @@
     color: #A0ECD0;
     cursor: pointer;
     background-color: white;
-  }
+}
 
-  .optionCounterButton:disabled {
+.optionCounterButton:disabled {
     cursor: not-allowed;
-  }
-
-.loginButton {
-    background-color: #ff7139;
-    color: white;
-    font-weight: 500;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
 }
 
 .headerTitle {

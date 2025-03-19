@@ -1,5 +1,3 @@
-
-
 .login {
   height: 100vh;
   display: flex;
@@ -12,6 +10,9 @@
   padding: 20px;
   border-radius: 5px;
   margin: auto; /* Center the container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .loginTitle {
@@ -19,11 +20,8 @@
   font-weight: bold;
   margin-bottom: 20px;
   white-space: nowrap; /* Ensure text is in a straight line */
-  display: flex;
+  /* display: flex; */
 }
-
-
-
 
 .formInput {
   height: 15px; 
@@ -32,6 +30,7 @@
   margin-top: 10px;
   border-radius: 5px;
   border: 1px solid #ff7139;
+  
 }
 
 .loginButton {
@@ -44,3 +43,6 @@
   border-radius: 5px;
   margin-top: 30px; /* Increase the margin-top to move it down */
 }
+
+
+
