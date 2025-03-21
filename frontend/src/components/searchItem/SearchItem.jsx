@@ -1,7 +1,13 @@
-
 import "./searchItem.css"
+import { useNavigate } from "react-router-dom";
 
 const SearchItem = () => {
+  const navigate = useNavigate();
+
+  const handleTitleClick = () => {
+    navigate("/trekking"); // Replace "/details" with the desired route
+  };
+
   return (
     <div className="searchItem">
         <img
@@ -10,7 +16,7 @@ const SearchItem = () => {
             className="siImg"
         /> 
         <div className="siDesc">
-            <h1 className="siTitle">Everest Base Camp  Trek</h1>
+            <h1 className="siTitle" onClick={handleTitleClick}>Everest Base Camp Trek</h1> {/* Add onClick */}
             <span className="siDistance">500m from center</span>
             <span className="siTaxiOp">Free airport taxi</span>
             <span className="siSubtitle">

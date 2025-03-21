@@ -38,7 +38,7 @@ const Header = ({type}) => {
       };
 
     const handleSearch = () => {
-        navigate ("/trekking", {state:{ destination, date, options}});
+        navigate ("/list", {state:{ destination, date, options}});
     }
 
     useEffect(() => {
