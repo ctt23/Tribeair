@@ -197,3 +197,18 @@
 .listResult {
   flex: 3;
 }
+
+.sort-select {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px; /* Increase font size */
+  color: #333;
+  background-color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.sort-select option {
+  font-size: 16px; /* Ensure options have the same font size */
+}

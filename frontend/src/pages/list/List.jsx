@@ -116,15 +116,15 @@ const List = () => {
                   <h3>Group size</h3>
                   <div className="filter-option">
                     <input type="checkbox" id="small" />
-                    <label htmlFor="pets-allowed">Small(up to 4)</label>
+                    <label htmlFor="pets-allowed">Small (up to 4)</label>
                   </div>
                   <div className="filter-option">
                     <input type="checkbox" id="camping" />
-                    <label htmlFor="breakfast-included">Medium(up to 8)</label>
+                    <label htmlFor="breakfast-included">Medium up to 8)</label>
                   </div>
                   <div className="filter-option">
                     <input type="checkbox" id="camping" />
-                    <label htmlFor="breakfast-included">Large(up to 12)</label>
+                    <label htmlFor="breakfast-included">Large (up to 12)</label>
                   </div>
                   <h3>Extras</h3>
                   <div className="filter-option">
@@ -137,6 +137,19 @@ const List = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="sorting-section">
+            <div className="sort-button">
+              <span className="sort-icon">↑↓</span>
+              Sort by:
+              <select className="sort-select" onChange={(e) => console.log(e.target.value)}>
+                <option value="top-picks">Our top picks</option>
+                <option value="price-highest">Price (highest first)</option>
+                <option value="price-lowest">Price (lowest first)</option>
+                <option value="highly-rated">Highly rated</option>
+                <option value="top-reviewed">Top reviewed</option>
+              </select>
             </div>
           </div>
           <div className="listResult">
