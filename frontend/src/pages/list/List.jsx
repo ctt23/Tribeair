@@ -27,7 +27,7 @@ const List = () => {
               <input placeholder={destination} type="text" />
             </div>
             <div className="lsItem">
-              <label>Check-in Date</label>
+              <label>Dates</label>
               <span onClick={() => setOpenDate(!openDate)}>{`${format(
                 date[0].startDate,
                 "MM/dd/yyyy"
@@ -41,28 +41,20 @@ const List = () => {
               )}
             </div>
             <div className="lsItem">
-              <label>Options</label>
-              <div className="lsOptions">
-                <div className="lsOptionItem">
-                  <span className="lsOptionText">
-                    Min price 
-                  </span>
-                  <input 
-                    type="number" 
-                    className="lsOptionInput"
-                    min={1} 
-                  />
+              <div className="filter-section">
+              <h2>Filter by:</h2>
+
+              <div className="budget-filter">
+                <h3>Your budget (whole trip)</h3>
+                <div className="price-range">£50 - £300+</div>
+                <div className="range-slider">
+                  <div className="slider-track"></div>
+                  <div className="slider-fill"></div>
+                  <div className="slider-handle left"></div>
+                  <div className="slider-handle right"></div>
                 </div>
-                <div className="lsOptionItem">
-                  <span className="lsOptionText">
-                    Max price 
-                  </span>
-                  <input 
-                    type="number" 
-                    className="lsOptionInput"
-                    min={1} 
-                  />
-                </div>
+                <div className="price-histogram"></div>
+              </div>
                 <div className="lsOptionItem">
                   <span className="lsOptionText">Adult</span>
                   <input
@@ -81,9 +73,71 @@ const List = () => {
                     placeholder={options.children}
                   />
                 </div>
+                <div className="popular-filters">
+                  <h3>Difficulty</h3>
+                  <div className="filter-option">
+                    <input type="checkbox" id="easy" />
+                    <label htmlFor="swimming-pool">Easy</label>
+                  </div>
+                  <div className="filter-option">
+                    <input type="checkbox" id="moderate" />
+                    <label htmlFor="4-stars">Moderate</label> 
+                  </div>
+                  <div className="filter-option">
+                    <input type="checkbox" id="strenous" />
+                    <label htmlFor="twin-beds">Strenous</label>
+                  </div>
+                  <div className="filter-option">
+                    <input type="checkbox" id="challenging" />
+                    <label htmlFor="holiday-homes">Challenging</label>
+                  </div>
+                  <h3>Region</h3>
+                  <div className="filter-option">
+                    <input type="checkbox" id="everest" />
+                    <label htmlFor="pets-allowed">Everest</label>
+                  </div>
+                  <div className="filter-option">
+                    <input type="checkbox" id="annapurna" />
+                    <label htmlFor="pets-allowed">Annapurna</label>
+                  </div>
+                  <div className="filter-option">
+                    <input type="checkbox" id="Makalu" />
+                    <label htmlFor="pets-allowed">Makalu</label>
+                  </div>
+                  <h3>Accommodation type</h3>
+                  <div className="filter-option">
+                    <input type="checkbox" id="teahouse" />
+                    <label htmlFor="pets-allowed">Teahouse</label>
+                  </div>
+                  <div className="filter-option">
+                    <input type="checkbox" id="camping" />
+                    <label htmlFor="breakfast-included">Camping</label>
+                  </div>
+                  <h3>Group size</h3>
+                  <div className="filter-option">
+                    <input type="checkbox" id="small" />
+                    <label htmlFor="pets-allowed">Small(up to 4)</label>
+                  </div>
+                  <div className="filter-option">
+                    <input type="checkbox" id="camping" />
+                    <label htmlFor="breakfast-included">Medium(up to 8)</label>
+                  </div>
+                  <div className="filter-option">
+                    <input type="checkbox" id="camping" />
+                    <label htmlFor="breakfast-included">Large(up to 12)</label>
+                  </div>
+                  <h3>Extras</h3>
+                  <div className="filter-option">
+                    <input type="checkbox" id="porters" />
+                    <label htmlFor="pets-allowed">Porters</label>
+                  </div>
+                  <div className="filter-option">
+                    <input type="checkbox" id="meals included" />
+                    <label htmlFor="breakfast-included">Meals included</label>
+                  </div>
+                </div>
               </div>
             </div>
-            <button>Search</button>
           </div>
           <div className="listResult">
             <SearchItem/>

@@ -29,20 +29,28 @@
     padding: 5px 10px;
     cursor: pointer;
     color: black;
-    background-color: white;
+    background-color: #ff7139;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition for hover effect */
-}
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+    font-size: 16px;
+}   
 
 .navButton:not(.noBackground):hover {
-    background-color: #f0f0f0; /* Make the button slightly darker */
-    transform: scale(1.05); /* Slightly enlarge the button */
+    background-color: #ff8a4d; /* Slightly lighter shade of the original color */
+    transform: scale(1.02); /* Slightly enlarge the button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 .navButton.noBackground {
     background-color: transparent;
     font-size: 16px;
     font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-
+.navIcon {
+    font-size: 16px;
+    margin-right: 5px;
+    font-style: bold;
+}

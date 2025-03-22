@@ -1,6 +1,8 @@
 import "./navbar.css";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 
 const Navbar = ({ showButtons = true }) => {
@@ -17,8 +19,9 @@ const Navbar = ({ showButtons = true }) => {
         {showButtons && (
           <div className="navItems">
             <button className="navButton noBackground" onClick={() => handleNavigation("/login")}>Tribeair your adventure</button>
-            <button className="navButton" onClick={() => handleNavigation("/login")}>Register</button>
-            <button className="navButton" onClick={() => handleNavigation("/login")}>Login</button>
+            <button className="navButton" onClick={() => handleNavigation("/login")}>
+              <FontAwesomeIcon icon={faUser} className="navIcon" /> Log in
+            </button>
           </div>
         )}
       </div>

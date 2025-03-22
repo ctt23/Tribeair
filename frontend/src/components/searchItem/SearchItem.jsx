@@ -23,7 +23,7 @@ const SearchItem = () => {
                 Difficulty type - Strenuous
             </span>
             <span className="siFeatures">
-                Entire studio • 1 bathroom • 21m² 1 full bed
+                Voted best trekking destination in the world several times
             </span>
             <span className="siCancelOp">Free cancellation </span>
             <span className="siCancelOpSubtitle">
