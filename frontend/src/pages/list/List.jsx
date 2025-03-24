@@ -139,28 +139,30 @@ const List = () => {
               </div>
             </div>
           </div>
-          <div className="sorting-section">
-            <div className="sort-button">
-              <span className="sort-icon">↑↓</span>
-              Sort by:
-              <select className="sort-select" onChange={(e) => console.log(e.target.value)}>
-                <option value="top-picks">Our top picks</option>
-                <option value="price-highest">Price (highest first)</option>
-                <option value="price-lowest">Price (lowest first)</option>
-                <option value="highly-rated">Highly rated</option>
-                <option value="top-reviewed">Top reviewed</option>
-              </select>
+          <div className="results-section">
+            <div className="sorting-section">
+              <div className="sort-button">
+                <span className="sort-icon">↑↓</span>
+                Sort by:
+                <select className="sort-select" onChange={(e) => console.log(e.target.value)}>
+                  <option value="top-picks">Our top picks</option>
+                  <option value="price-highest">Price (highest first)</option>
+                  <option value="price-lowest">Price (lowest first)</option>
+                  <option value="highly-rated">Highly rated</option>
+                  <option value="top-reviewed">Top reviewed</option>
+                </select>
+              </div>
             </div>
-          </div>
-          <div className="listResult">
-            <SearchItem/>
-            <SearchItem/>
-            <SearchItem/>
-            <SearchItem/>
-            <SearchItem/>
-            <SearchItem/>
-            <SearchItem/>
-            <SearchItem/>
+            <div className="listResult">
+              <SearchItem/>
+              <SearchItem/>
+              <SearchItem/>
+              <SearchItem/>
+              <SearchItem/>
+              <SearchItem/>
+              <SearchItem/>
+              <SearchItem/>
+            </div>
           </div>
         </div>
       </div>

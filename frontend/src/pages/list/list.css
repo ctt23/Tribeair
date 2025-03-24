@@ -212,3 +212,9 @@
 .sort-select option {
   font-size: 16px; /* Ensure options have the same font size */
 }
+
+.results-section{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
