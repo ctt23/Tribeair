@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import "./verify.css";
+import { useLocation } from "react-router-dom";
+import { supabase } from '../../supabase';
 
 const Verify = () => {
   const [code, setCode] = useState(new Array(6).fill("")); // Initialize state for 6 input fields
+  const [error, setError] = useState(null); // To handle any errors
+  const location = useLocation();
+  const email = location.state?.email; // Get the email from the state
 
   const handleChange = (value, index) => {
     const updatedCode = [...code];
@@ -16,11 +21,29 @@ const Verify = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const verificationCode = code.join(""); // Combine the 6 digits into a single string
     console.log("Verification Code:", verificationCode);
-    // Add logic to verify the code
+
+    try {
+      const { data, error } = await supabase.auth.verifyOtp({
+        email: email,
+        token: verificationCode,
+        type: 'email',
+      });
+
+      if (error) {
+        setError(error.message);
+      } else {
+        console.log("OTP verified successfully!");
+        console.log("Session:", data.session);
+        // Handle successful login (e.g., redirect to a protected route)
+        // You can use data.session to authenticate the user
+      }
+    } catch (error) {
+      setError(error.message);
+    }
   };
 
   const isButtonDisabled = code.some((digit) => !digit); // Disable the button if any input field is empty
@@ -54,6 +77,7 @@ const Verify = () => {
           >
             Verify email
           </button>
+          {error && <div style={{ color: 'red' }}>{error}</div>}
         </form>
       </div>
     </>
