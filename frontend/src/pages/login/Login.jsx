@@ -6,7 +6,7 @@ import { supabase } from '../../supabase';
 
 const Login = () => {
   const [email, setEmail] = useState("");
-  const [error, setError] = useState(null); // To handle any errors
+  const [error, setError] = useState(null); 
   const navigate = useNavigate();
 
   const handleChange = (e) => {

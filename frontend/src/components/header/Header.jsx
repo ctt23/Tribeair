@@ -38,8 +38,12 @@ const Header = ({type}) => {
       };
 
     const handleSearch = () => {
-        navigate ("/list", {state:{ destination, date, options}});
-    }
+        if (!destination.trim()) {
+            alert("Please enter a destination."); // Show alert if destination is empty
+            return;
+        }
+        navigate("/list", { state: { destination, date, options } });
+    };
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -84,6 +88,7 @@ const Header = ({type}) => {
                                 type = "text"
                                 placeholder="Your trekking destination"
                                 className="headerSearchInput"
+                                value={destination}
                                 onChange={(e) => setDestination(e.target.value)}
                             />
                         </div>
@@ -122,27 +127,31 @@ const Header = ({type}) => {
                                             <button className="optionCounterButton"onClick={()=>handleOption("adult", "i")}>+</button>
                                         </div>
                                     </div>
-                                    <div className="options">
-                                        <div className="optionItem">
-                                            <span className="optionText">children</span>
-                                            <div className="optionCounter">
-                                                <button 
-                                                disabled={options.children <= 0}
-                                                className="optionCounterButton"
-                                                onClick={()=>handleOption("children", "d")}
-                                                >
-                                                    -
-                                                </button>
-                                                <span className="optionCoutnerNumber">{options.children}</span>
-                                                <button className="optionCounterButton" onClick={()=>handleOption("children", "i")}>+</button>
-                                            </div>
+                                    <div className="optionItem">
+                                        <span className="optionText">Children</span>
+                                        <div className="optionCounter">
+                                            <button 
+                                            disabled={options.children <= 0}
+                                            className="optionCounterButton"
+                                            onClick={()=>handleOption("children", "d")}
+                                            >
+                                                -
+                                            </button>
+                                            <span className="optionCoutnerNumber">{options.children}</span>
+                                            <button className="optionCounterButton" onClick={()=>handleOption("children", "i")}>+</button>
                                         </div>
                                     </div>
                                 </div>
                                 }
                         </div>
                         <div className="headerSearchItem">
-                            <div className="headerBtn" onClick={handleSearch}>Search</div>
+                            <button 
+                                className="headerBtn" 
+                                onClick={handleSearch} 
+                                disabled={!destination.trim()} // Disable button if destination is empty
+                            >
+                                Search
+                            </button>
                         </div>                
                     </div>
                 </> 

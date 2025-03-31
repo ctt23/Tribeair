@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import "./verify.css";
-import { useLocation } from "react-router-dom";
-import { supabase } from '../../supabase';
+import { useLocation, useNavigate } from "react-router-dom";
+import { supabase } from "../../supabase";
+import { useDispatch } from "react-redux"; // Import Redux dispatch
+import { setUser } from "../../store"; // Import Redux action
 
 const Verify = () => {
-  const [code, setCode] = useState(new Array(6).fill("")); // Initialize state for 6 input fields
-  const [error, setError] = useState(null); // To handle any errors
+  const [code, setCode] = useState(new Array(6).fill(""));
+  const [error, setError] = useState(null);
   const location = useLocation();
-  const email = location.state?.email; // Get the email from the state
+  const navigate = useNavigate();
+  const dispatch = useDispatch(); // Initialize Redux dispatch
+  const email = location.state?.email;
 
   const handleChange = (value, index) => {
     const updatedCode = [...code];
@@ -30,7 +34,7 @@ const Verify = () => {
       const { data, error } = await supabase.auth.verifyOtp({
         email: email,
         token: verificationCode,
-        type: 'email',
+        type: "email",
       });
 
       if (error) {
@@ -38,8 +42,20 @@ const Verify = () => {
       } else {
         console.log("OTP verified successfully!");
         console.log("Session:", data.session);
-        // Handle successful login (e.g., redirect to a protected route)
-        // You can use data.session to authenticate the user
+
+        // Retrieve user information
+        const { data: userData, error: userError } = await supabase.auth.getUser();
+        if (userError) {
+          setError(userError.message);
+        } else {
+          const firstName = userData.user?.user_metadata?.first_name || "User";
+
+          // Dispatch the first name to Redux
+          dispatch(setUser({ firstName }));
+
+          // Redirect to home page
+          navigate("/");
+        }
       }
     } catch (error) {
       setError(error.message);
@@ -77,7 +93,7 @@ const Verify = () => {
           >
             Verify email
           </button>
-          {error && <div style={{ color: 'red' }}>{error}</div>}
+          {error && <div style={{ color: "red" }}>{error}</div>}
         </form>
       </div>
     </>

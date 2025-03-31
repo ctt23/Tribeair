@@ -149,3 +149,12 @@
     color: lightgray;
     cursor: pointer;
 }
+
+.trekkingHeading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    gap: 20px;
+    cursor: pointer;
+}
+

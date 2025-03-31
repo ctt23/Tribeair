@@ -113,6 +113,15 @@ const Trekking = () => {
               </div>
             ))}
           </div>
+          <div className="trekkingHeading">
+            <h4>Overview</h4>
+            <h4>Itinerary</h4>
+            <h4>Includes</h4>
+            <h4>Excludes</h4>           
+            <h4>Reviews</h4>
+            <h4>Galleries</h4>
+            <h4>Book Dates</h4>
+          </div>
           <div className="trekkingDetails">
               <div className="trekkingDetailsTexts">
                 <h1 className='trekkingTitle'>Trek the world's most famous trek</h1>

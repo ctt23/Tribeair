@@ -1,28 +1,32 @@
 .footer{
-    width: 100%;
-    width: 1024px;
-    font-size: 12px;
-    margin-top: 50px;
-  }
+  width: 100%;
+  font-size: 12px;
+  margin-top: 50px;
+  background-color: #F5F5F5;
+}
   
-  .fLists{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-  }
+.fLists{
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 20px;
+}
   
-  .fList{
-    list-style: none;
-    padding: 0;
-  }
+.fList{
+  list-style: none;
+  padding: 0;
+}
   
-  .fListItem{
-    margin-bottom: 10px;
-    color: #003580;
-    cursor: pointer;
-  }
+.fListItem{
+  margin-bottom: 10px;
+  color: #003580;
+  cursor: pointer;
+}
 
-  .fText {
-    text-align: center;
-  }
+.fText {
+  text-align: center;
+}
+
+  

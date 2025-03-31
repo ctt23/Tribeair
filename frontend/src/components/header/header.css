@@ -51,43 +51,7 @@
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
 }
-    
-.headerBtn:hover {
-    background-color: #e65a1e;
-    transform: scale(1.03);
-    box-shadow: 0 5px 15px rgba(230, 90, 30, 0.4);
-}
-  
-.headerBtn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.2),
-      transparent
-    );
-    transition: 0.5s;
-}
-  
-.headerBtn:hover::before {
-    left: 100%;
-}
-    
-.headerBtn.disabled {
-    background-color: #ddd;
-    color: #aaa;
-    cursor: not-allowed;
-}
-  
 
 .headerSearch {
     height: 30px;
