@@ -29,7 +29,7 @@ const Login = () => {
       alert("An OTP code has been sent to your email address. Please check your inbox.");
       navigate("/verify", { state: { email: email } }); // Redirect to the verify page with email
     }
-  }; // <-- Added missing closing curly brace for handleSubmit
+  }; 
 
   return (
     <>

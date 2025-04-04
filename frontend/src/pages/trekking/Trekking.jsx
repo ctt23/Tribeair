@@ -4,6 +4,7 @@ import Navbar from '../../components/navbar/Navbar'
 import Header from '../../components/header/Header'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react';
+import Footer from '../../components/footer/Footer';
 
 import {
   faCircleArrowLeft,
@@ -142,6 +143,7 @@ const Trekking = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

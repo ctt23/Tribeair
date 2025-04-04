@@ -8,7 +8,7 @@ import { useSelector } from "react-redux"; // Import Redux hook
 const Navbar = ({ showButtons = true }) => {
   const navigate = useNavigate();
   const firstName = useSelector((state) => state.user.firstName); // Get first name from Redux
-
+  console.log(firstName);
   const handleNavigation = (path) => {
     navigate(path);
   };

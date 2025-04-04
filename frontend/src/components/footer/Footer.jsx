@@ -5,43 +5,44 @@ const Footer = () => {
     <div className="footer">
       <div className="fLists">
         <ul className="fList">
-          <li className="fListItem">Countries</li>
-          <li className="fListItem">Regions</li>
-          <li className="fListItem">Cities</li>
-          <li className="fListItem">Districts</li>
-          <li className="fListItem">Airports</li>
-          <li className="fListItem">Hotels</li>
+          <li className="fListItemHeader">Help & Support</li>
+          <li className="fListItem">FAQs</li>
+          <li className="fListItem">Contact Us</li>
+          <li className="fListItem">How it works</li>
+          <li className="fListItem">Cancellation and Refund</li>          
         </ul>
         <ul className="fList">
-          <li className="fListItem">Homes </li>
-          <li className="fListItem">Apartments </li>
-          <li className="fListItem">Resorts </li>
-          <li className="fListItem">Villas</li>
-          <li className="fListItem">Hostels</li>
-          <li className="fListItem">Guest houses</li>
+          <li className="fListItemHeader">Discover</li>
+          <li className="fListItem">Subscribe and save</li>
+          <li className="fListItem">Travel Stories</li>
+          <li className="fListItem">Guided treks </li>
+          <li className="fListItem">Local Experiences</li>
+          <li className="fListItem">Seasonal deals</li>
         </ul>
         <ul className="fList">
-          <li className="fListItem">Unique places to stay </li>
-          <li className="fListItem">Reviews</li>
-          <li className="fListItem">Unpacked: Travel articles </li>
-          <li className="fListItem">Travel communities </li>
-          <li className="fListItem">Seasonal and holiday deals </li>
+          <li className="fListItemHeader">T&C</li>
+          <li className="fListItem">Manage cookie settings </li>
+          <li className="fListItem">Privacy & cookies</li>
+          <li className="fListItem">Terms and coditions</li>
+          <li className="fListItem">Seller Policies</li>
+          <li className="fListItem">Buyers Protections</li>
+          <li className="fListItem">Community Guidelines </li>
         </ul>
         <ul className="fList">
-          <li className="fListItem">Car rental </li>
-          <li className="fListItem">Flight Finder</li>
-          <li className="fListItem">Restaurant reservations </li>
-          <li className="fListItem">Travel Agents </li>
+          <li className="fListItemHeader">Hosting</li>
+          <li className="fListItem">Tribeair your adventure</li>
+          <li className="fListItem">Tribeair responsibly</li>
+          <li className="fListItem">Join a hosting class</li>
+          <li className="fListItem">Travel Agents</li>
         </ul>
         <ul className="fList">
-          <li className="fListItem">Curtomer Service</li>
-          <li className="fListItem">Partner Help</li>
-          <li className="fListItem">Careers</li>
+          <li className="fListItemHeader">About</li>
+          <li className="fListItem">About Tribeair</li>
+          <li className="fListItem">Tribeair Foundation</li>
           <li className="fListItem">Sustainability</li>
+          <li className="fListItem">Careers</li>          
           <li className="fListItem">Press center</li>
-          <li className="fListItem">Safety Resource Center</li>
           <li className="fListItem">Investor relations</li>
-          <li className="fListItem">Terms & conditions</li>
         </ul>
       </div>
       <div className="fText">Copyright © 2024 Tribeair, Inc.</div>

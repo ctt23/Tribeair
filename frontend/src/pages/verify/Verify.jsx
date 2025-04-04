@@ -45,13 +45,17 @@ const Verify = () => {
 
         // Retrieve user information
         const { data: userData, error: userError } = await supabase.auth.getUser();
+        console.log("User Data:", userData);
         if (userError) {
           setError(userError.message);
         } else {
-          const firstName = userData.user?.user_metadata?.first_name || "User";
+          const firstName = userData.user?.email || "User";
 
           // Dispatch the first name to Redux
           dispatch(setUser({ firstName }));
+
+          // Save the session to localStorage
+          localStorage.setItem("user", JSON.stringify({ firstName }));
 
           // Redirect to home page
           navigate("/");
