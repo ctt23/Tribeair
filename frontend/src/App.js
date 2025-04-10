@@ -13,6 +13,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import { useDispatch } from "react-redux";
 import { setUser } from "./store"; // Import the setUser action
+import FooterRoutes from "./components/footer/FooterRoutes"; // Import your FooterRoutes component
 
 function App() {
   const dispatch = useDispatch();
@@ -43,6 +44,12 @@ function App() {
           <Route path="/trekking/:id" element={<Trekking />} />
           <Route path="/login" element={<Login />} />
           <Route path="/verify" element={<Verify />} />
+
+          {/* Dynamically render footer routes */}
+          {FooterRoutes.map((route, index) => (
+            <Route key={index} path={route.path} element={route.element} />
+          ))}
+
         </Routes>
       </Router>
     </Provider>

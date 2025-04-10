@@ -4,6 +4,15 @@
   margin-top: 50px;
   background-color: #F5F5F5;
 }
+
+.footer a {
+  text-decoration: none; /* Remove underline from all links in the footer */
+  color: inherit; /* Inherit color from parent element */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Optional: Add underline on hover for better UX */
+}
   
 .fLists{
   width: 100%;
@@ -23,6 +32,11 @@
   margin-bottom: 10px;
   color: #003580;
   cursor: pointer;
+  text-decoration: none; /* Remove underline from links */
+}
+
+.fListItem:hover {
+  text-decoration: underline; /* Optional: Add underline on hover for better UX */
 }
 
 .fText {
@@ -35,4 +49,3 @@
   color: #003580;
 }
 
-  
